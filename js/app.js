@@ -16,7 +16,7 @@
 //     for (let hour = 0; hour < this.openingHours; hour++) {
 //       this.customersPerHour.push(
 //         Math.floor(
-//           Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) +
+//           Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers + 1) +
 //             this.minHourlyCustomers
 //         )
 //       );
@@ -47,7 +47,8 @@ const seattle = {
     for (let hour = 0; hour < this.openingHours; hour++) {
       this.customersPerHour.push(
         Math.floor(
-          Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) +
+          Math.random() *
+            (this.maxHourlyCustomers - this.minHourlyCustomers + 1) +
             this.minHourlyCustomers
         )
       );
@@ -80,7 +81,8 @@ const tokyo = {
     for (let hour = 0; hour < this.openingHours; hour++) {
       this.customersPerHour.push(
         Math.floor(
-          Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) +
+          Math.random() *
+            (this.maxHourlyCustomers - this.minHourlyCustomers + 1) +
             this.minHourlyCustomers
         )
       );
@@ -113,7 +115,8 @@ const dubai = {
     for (let hour = 0; hour < this.openingHours; hour++) {
       this.customersPerHour.push(
         Math.floor(
-          Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) +
+          Math.random() *
+            (this.maxHourlyCustomers - this.minHourlyCustomers + 1) +
             this.minHourlyCustomers
         )
       );
@@ -146,7 +149,8 @@ const paris = {
     for (let hour = 0; hour < this.openingHours; hour++) {
       this.customersPerHour.push(
         Math.floor(
-          Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) +
+          Math.random() *
+            (this.maxHourlyCustomers - this.minHourlyCustomers + 1) +
             this.minHourlyCustomers
         )
       );
@@ -179,7 +183,8 @@ const lima = {
     for (let hour = 0; hour < this.openingHours; hour++) {
       this.customersPerHour.push(
         Math.floor(
-          Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) +
+          Math.random() *
+            (this.maxHourlyCustomers - this.minHourlyCustomers + 1) +
             this.minHourlyCustomers
         )
       );
