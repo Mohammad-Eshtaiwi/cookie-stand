@@ -218,6 +218,13 @@ function createSalesList(location = {}, name) {
     ++hour;
     if (hour === 13) hour = 1;
   }
+  let sum = 0;
+  for (let avg = 0; avg < avgSalePerHour.length; avg++) {
+    sum += avgSalePerHour[avg];
+  }
+  sum = `Total: ${sum}`;
+  textForLi.push(sum);
+  //   textForLi.push()
   console.log(textForLi);
   for (let i = 0; i < textForLi.length; i++) {
     let ul = document.createElement("ul");
