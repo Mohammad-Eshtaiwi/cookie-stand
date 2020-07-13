@@ -21,11 +21,12 @@ function GenarateBranches(
 }
 // - function to calculate a avg of the sales
 GenarateBranches.prototype.genarateCustomers = function () {
+  console.log("max", this.maxHourlyCustomers);
+  console.log("min", this.minHourlyCustomers);
   for (let hour = 0; hour < this.openingHours; hour++) {
     this.customersPerHour.push(
       Math.floor(
-        Math.random() *
-          (this.maxHourlyCustomers - this.minHourlyCustomers + 1) +
+        Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) +
           this.minHourlyCustomers
       )
     );
@@ -34,10 +35,7 @@ GenarateBranches.prototype.genarateCustomers = function () {
 GenarateBranches.prototype.calculateAvgSales = function () {
   for (let hour = 0; hour < this.openingHours; hour++) {
     this.avgSalePerHour.push(
-      Math.round(
-        (this.customersPerHour[hour] * this.avgCookieForEachCustomer) /
-          this.openingHours
-      )
+      Math.round(this.customersPerHour[hour] * this.avgCookieForEachCustomer)
     );
   }
 };
@@ -93,7 +91,7 @@ let openAt = branches[0].workStartHour;
 function tableStructure() {
   let salesTable = document.querySelector(".sales-table");
   salesTable.innerHTML = `
-    <table border="1">
+    <table>
     <thead>
     <tr>
     </tr>

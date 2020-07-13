@@ -1,0 +1,4 @@
+/* .sales-table table tbody tr td, */
+.sales-table table tbody tr {
+  border: black 1px solid !important;
+}
