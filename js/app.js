@@ -1,4 +1,5 @@
 /* eslint-disable quotes */
+"use strict";
 // function GenarateBranches(
 //   minHourlyCustomers,
 //   maxHourlyCustomers,
