@@ -45,13 +45,13 @@ GenarateBranches.prototype.calculateAvgSales = function () {
 GenarateBranches.prototype.calculateSum = function () {
   this.sum = sum(this.avgSalePerHour);
 };
-GenarateBranches.prototype.fillTableBody = function () {
+GenarateBranches.prototype.render = function () {
   let tableBody = document.querySelector(".sales-table tbody");
   console.log(tableBody);
   let tr = document.createElement("tr");
   let th = document.createElement("th");
-  tr.appendChild(th);
   th.innerHTML = this.location;
+  tr.appendChild(th);
   for (let i = 0; i < this.openingHours; i++) {
     th = document.createElement("td");
     th.innerHTML = this.avgSalePerHour[i];
@@ -159,6 +159,6 @@ function tableFooter(workingHours = openingHours) {
 tableStructure();
 tableHeader();
 branches.forEach((branch) => {
-  branch.fillTableBody();
+  branch.render();
 });
 tableFooter();
