@@ -49,17 +49,17 @@ GenarateBranches.prototype.fillTableBody = function () {
   let tableBody = document.querySelector(".sales-table tbody");
   console.log(tableBody);
   let tr = document.createElement("tr");
-  let td = document.createElement("td");
-  tr.appendChild(td);
-  td.innerHTML = this.location;
+  let th = document.createElement("th");
+  tr.appendChild(th);
+  th.innerHTML = this.location;
   for (let i = 0; i < this.openingHours; i++) {
-    td = document.createElement("td");
-    td.innerHTML = this.avgSalePerHour[i];
-    tr.appendChild(td);
+    th = document.createElement("td");
+    th.innerHTML = this.avgSalePerHour[i];
+    tr.appendChild(th);
   }
-  td = document.createElement("td");
-  td.innerHTML = this.sum;
-  tr.appendChild(td);
+  th = document.createElement("td");
+  th.innerHTML = this.sum;
+  tr.appendChild(th);
   tableBody.appendChild(tr);
   console.log(tr);
 };
@@ -148,11 +148,13 @@ function tableFooter(workingHours = openingHours) {
     tablefooter.appendChild(td);
   }
   let add = 0;
-  // for (let col = 0; col < openingHours; col++) {
-  //   console.log(branches[col].workStartHour);
-  //   add += branches[col].sum;
-  // }
+  for (let col = 0; col < branches.length; col++) {
+    add += branches[col].sum;
+  }
   console.log(add);
+  let td = document.createElement("td");
+  td.innerHTML = add;
+  tablefooter.appendChild(td);
 }
 tableStructure();
 tableHeader();
