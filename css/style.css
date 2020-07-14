@@ -1,4 +1,20 @@
-/* .sales-table table tbody tr td, */
-.sales-table table tbody tr {
-  border: black 1px solid !important;
+/* ++++++++++++++++ 
+table styleing 
+++++++++++++++++++*/
+.sales-table table {
+  text-align: center;
 }
+.sales-table table td,
+.sales-table table th {
+  padding: 5px;
+}
+
+.sales-table table tbody td,
+.sales-table table tbody th,
+.sales-table table tfoot td,
+.sales-table table tfoot th {
+  border: rgb(223, 223, 223) 1px solid !important;
+}
+/* xxxxxxxxxxxxxxx 
+table styleing 
+xxxxxxxxxxxxxxxxxx*/
