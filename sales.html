@@ -5,23 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sales</title>
-
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<nav class="uppercase">
-    <div class="container">
-        <div class="logo"><img src="./assets/salmon.png" alt="salmon-cookies"></div>
-        <ul>
-            <li><a href="./index.html" class="btn">home</a></li>
-            <li><a href="./sales.html" class="btn">sales</a></li>
-        </ul>
-    </div>
-</nav>
-
-<body>
+<body class="sales-body">
+    <nav class="uppercase">
+        <div class="container">
+            <div class="logo"><img src="./assets/salmon.png" alt="salmon-cookies"></div>
+            <ul>
+                <li><a href="./index.html" class="btn">home</a></li>
+                <li><a href="./sales.html" class="btn">sales</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="add-location">
+        <div class="container">
+            <form>
+                <fieldset>
+                    <legend>Add new branch:</legend>
+                    <label for="location">Loaction</label>
+                    <input type="text" required name="location" id="location">
+                    <label for="min">minimum customers per hour</label>
+                    <input type="number" required name="min" id="min" min="0">
+                    <label for="max">maximum customers per hour</label>
+                    <input type="number" required name="max" id="max">
+                    <label for="avg">avarege cookies for per customer</label>
+                    <input type="number" required name="avg" id="avg" min="1">
+                    <button type="submit" class="btn">add</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
     <section class="sales-table">
+        <div class="container">
 
+        </div>
     </section>
     <footer>
         <p class="text-center">all copy rights for salamon-cookies</p>

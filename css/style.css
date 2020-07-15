@@ -5,6 +5,7 @@
   --main-color: #fb6018de;
 }
 * {
+  transition: 300ms ease-out all;
   box-sizing: border-box;
 }
 body {
@@ -158,6 +159,11 @@ nav ul li:first-of-type {
 .contact-us form button:hover {
   background-color: var(--main-color);
 }
+/* sales page */
+.sales-body > section {
+  padding: 5em 0;
+}
+
 /***************** 
 table styleing 
 *****************/
@@ -171,15 +177,41 @@ table styleing
 .sales-table table th {
   padding: 5px;
 }
-
+.sales-table table th {
+  font-weight: bolder;
+}
 .sales-table table tbody td,
 .sales-table table tbody th,
 .sales-table table tfoot td,
 .sales-table table tfoot th {
   border: rgb(223, 223, 223) 1px solid !important;
 }
+
 /* xxxxxxxxxxxxxxx 
 table styleing 
+xxxxxxxxxxxxxxxxxx*/
+
+/***************** 
+add-location 
+*****************/
+.add-location form fieldset {
+  display: grid;
+}
+.add-location form fieldset label,
+.add-location form fieldset button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.add-location form fieldset input {
+  padding: 0.5em;
+}
+.add-location form fieldset input:focus {
+  border-color: var(--main-color);
+  outline-color: var(--main-color);
+}
+/* xxxxxxxxxxxxxxx 
+add-location
 xxxxxxxxxxxxxxxxxx*/
 footer {
   background-color: #000;

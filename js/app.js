@@ -71,11 +71,7 @@ const branches = [
 ];
 // genarate custumers and
 // calculate the avarage sales per hour for each branch
-branches.forEach((branch) => {
-  branch.genarateCustomers();
-  branch.calculateAvgSales();
-  branch.calculateSum();
-});
+
 // sum function
 function sum(arr) {
   let sum = 0;
@@ -89,7 +85,7 @@ let openingHours = branches[0].openingHours;
 let openAt = branches[0].workStartHour;
 // function to create a table structure that ready to add data from my objects
 function tableStructure() {
-  let salesTable = document.querySelector(".sales-table");
+  let salesTable = document.querySelector(".sales-table .container");
   salesTable.innerHTML = `
     <table>
     <thead>
@@ -154,9 +150,41 @@ function tableFooter(workingHours = openingHours) {
   td.innerHTML = add;
   tablefooter.appendChild(td);
 }
-tableStructure();
-tableHeader();
+
 branches.forEach((branch) => {
-  branch.render();
+  branch.genarateCustomers();
+  branch.calculateAvgSales();
+  branch.calculateSum();
 });
-tableFooter();
+//function to create new location and render it in the table
+function addNewLocation(location, min, max, avg) {
+  console.log(location, min, max, avg);
+  branches.push(new GenarateBranches(location, min, max, avg));
+  console.log(branches[branches.length - 1]);
+  branches[branches.length - 1].genarateCustomers();
+  branches[branches.length - 1].calculateAvgSales();
+  branches[branches.length - 1].calculateSum();
+  tableConstructor();
+}
+let form = document.querySelector(".add-location form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(e);
+  const location = e.target[1].value;
+  const min = parseInt(e.target[2].value);
+  const max = parseInt(e.target[3].value);
+  const avg = parseInt(e.target[4].value);
+  console.log(location, min, max, avg);
+  addNewLocation(location, min, max, avg);
+});
+console.log(form);
+
+function tableConstructor() {
+  tableStructure();
+  tableHeader();
+  branches.forEach((branch) => {
+    branch.render();
+  });
+  tableFooter();
+}
+tableConstructor();
