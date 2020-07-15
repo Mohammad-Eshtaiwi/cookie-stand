@@ -179,6 +179,7 @@ table styleing
 }
 .sales-table table th {
   font-weight: bolder;
+  vertical-align: middle;
 }
 .sales-table table tbody td,
 .sales-table table tbody th,
