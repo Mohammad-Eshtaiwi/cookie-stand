@@ -161,15 +161,15 @@ nav ul li:first-of-type {
 }
 /* sales page */
 .sales-body > section {
-  padding: 5em 0;
+  padding-top: 5em;
 }
-
+.sales-body > section:last-of-type {
+  padding-bottom: 5em;
+}
 /***************** 
 table styleing 
 *****************/
-.sales-table {
-  padding: 5em 0;
-}
+
 .sales-table table {
   text-align: center;
 }
