@@ -26,7 +26,8 @@ GenarateBranches.prototype.genarateCustomers = function () {
   for (let hour = 0; hour < this.openingHours; hour++) {
     this.customersPerHour.push(
       Math.floor(
-        Math.random() * (this.maxHourlyCustomers - this.minHourlyCustomers) +
+        Math.random() *
+          (this.maxHourlyCustomers - this.minHourlyCustomers + 1) +
           this.minHourlyCustomers
       )
     );
