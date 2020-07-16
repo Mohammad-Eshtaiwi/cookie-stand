@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 /* eslint-disable no-unused-vars */
 /* eslint-disable quotes */
 "use strict";
@@ -44,6 +45,7 @@ GenarateBranches.prototype.calculateAvgSales = function () {
 GenarateBranches.prototype.calculateSum = function () {
   this.sum = sum(this.avgSalePerHour);
 };
+// render the body of the table
 GenarateBranches.prototype.render = function () {
   let tableBody = document.querySelector(".sales-table tbody");
   console.log(tableBody);
@@ -174,7 +176,7 @@ form.addEventListener("submit", (e) => {
   const location = e.target[1].value;
   const min = parseInt(e.target[2].value);
   const max = parseInt(e.target[3].value);
-  const avg = parseInt(e.target[4].value);
+  const avg = Number(e.target[4].value);
   console.log(location, min, max, avg);
   addNewLocation(location, min, max, avg);
 });
