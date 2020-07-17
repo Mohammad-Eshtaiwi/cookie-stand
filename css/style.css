@@ -1,6 +1,7 @@
-/* 196 */
-/* 150 each phto*/
-/* 9.2 gap */
+/* font-family: 'Anton', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Yanone Kaffeesatz', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Slab&family=Yanone+Kaffeesatz&display=swap");
 :root {
   --main-color: #fb6018de;
 }
@@ -10,6 +11,9 @@
 }
 body {
   margin: 0;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.5;
+  color: #006823;
 }
 html {
   font-size: 16px;
@@ -21,6 +25,17 @@ h1 {
 h2 {
   font-size: 2.3rem;
 }
+h1,
+h2,
+h3 {
+  font-family: "Anton", sans-serif;
+  font-weight: bolder;
+  color: var(--main-color);
+}
+section {
+  background-color: var(--main-color);
+}
+
 .btn {
   background-color: #fb6018de;
   padding: 1rem 2rem;
@@ -36,6 +51,8 @@ h2 {
   width: 960px;
   max-width: 100%;
   margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
 }
 
 /* utilities */
@@ -59,7 +76,7 @@ h2 {
 }
 .grid-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 220px);
+  grid-template-columns: repeat(auto-fit, 218px);
   gap: 9.2222222222222222222px;
 }
 /* *************** 
@@ -87,6 +104,13 @@ nav ul li:first-of-type {
 }
 
 /********** hero **********/
+.hero {
+  padding-top: 30px;
+}
+.hero .container {
+  padding: 0;
+  display: flex;
+}
 .hero img {
   width: 100%;
 }
@@ -134,7 +158,6 @@ nav ul li:first-of-type {
   text-align: left;
 }
 .contact-us .location {
-  color: #607d8b;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -172,10 +195,13 @@ table styleing
 
 .sales-table table {
   text-align: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.2rem;
+  color: gray;
 }
 .sales-table table td,
 .sales-table table th {
-  padding: 5px;
+  padding: 3px;
 }
 .sales-table table th {
   font-weight: bolder;
@@ -186,6 +212,8 @@ table styleing
 .sales-table table tfoot td,
 .sales-table table tfoot th {
   border: rgb(223, 223, 223) 1px solid !important;
+  background-color: #006823;
+  color: #bae1ca;
 }
 
 /* xxxxxxxxxxxxxxx 
