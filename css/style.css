@@ -1,0 +1,249 @@
+/* font-family: 'Anton', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Yanone Kaffeesatz', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Slab&family=Yanone+Kaffeesatz&display=swap");
+:root {
+  --main-color: #fb6018de;
+}
+* {
+  transition: 300ms ease-out all;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.5;
+  color: #006823;
+}
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.3rem;
+}
+h1,
+h2,
+h3 {
+  font-family: "Anton", sans-serif;
+  font-weight: bolder;
+  color: var(--main-color);
+}
+section {
+  background-color: var(--main-color);
+}
+
+.btn {
+  background-color: #fb6018de;
+  padding: 1rem 2rem;
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+}
+.btn:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.container {
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+}
+
+/* utilities */
+
+.postion-relative {
+  position: relative;
+}
+.postion-absolute {
+  position: absolute;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  gap: 9.2px;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 218px);
+  gap: 9.2222222222222222222px;
+}
+/* *************** 
+nav styleing 
+xxxxxxxxxxxxxxxxxx*/
+nav {
+  background-color: black;
+  padding: 1em 0;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+nav img {
+  display: block;
+  width: 200px;
+}
+nav ul {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+}
+nav ul li:first-of-type {
+  margin-right: 0.7rem;
+}
+
+/********** hero **********/
+.hero {
+  padding-top: 30px;
+}
+.hero .container {
+  padding: 0;
+  display: flex;
+}
+.hero img {
+  width: 100%;
+}
+.hero .btn {
+  bottom: 0;
+  right: 0;
+  margin-bottom: 1rem;
+}
+/*xxxxxxxxx hero xxxxxxxxx*/
+/* locations */
+.locations {
+  padding: 5em 0;
+}
+.locations .grid-5 {
+  padding-top: 3em;
+  justify-content: space-around;
+}
+/* locations */
+
+/* side-products */
+.side-products {
+  padding: 5em 0;
+}
+.side-products .grid-4 {
+  padding-top: 3em;
+}
+.side-products img {
+  width: 100%;
+  height: 250px;
+}
+/* side-products */
+/* contact */
+.contact-us {
+  font-size: 1rem;
+  padding: 5em 0;
+}
+.contact-us .container > * {
+  margin-bottom: 1rem;
+}
+.contact-us a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.contact-us .title {
+  text-align: left;
+}
+.contact-us .location {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.contact-us form {
+  display: grid;
+  row-gap: 25px;
+}
+.contact-us form input {
+  padding: 15px 8px;
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+}
+.contact-us form input:focus {
+  border: 2px solid #000;
+}
+.contact-us form button {
+  justify-self: start;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border: none;
+}
+.contact-us form button:hover {
+  background-color: var(--main-color);
+}
+/* sales page */
+.sales-body > section {
+  padding-top: 5em;
+}
+.sales-body > section:last-of-type {
+  padding-bottom: 5em;
+}
+/***************** 
+table styleing 
+*****************/
+
+.sales-table table {
+  text-align: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.2rem;
+  color: gray;
+}
+.sales-table table td,
+.sales-table table th {
+  padding: 3px;
+}
+.sales-table table th {
+  font-weight: bolder;
+  vertical-align: middle;
+}
+.sales-table table tbody td,
+.sales-table table tbody th,
+.sales-table table tfoot td,
+.sales-table table tfoot th {
+  border: rgb(223, 223, 223) 1px solid !important;
+  background-color: #006823;
+  color: #bae1ca;
+}
+
+/* xxxxxxxxxxxxxxx 
+table styleing 
+xxxxxxxxxxxxxxxxxx*/
+
+/***************** 
+add-location 
+*****************/
+.add-location form fieldset {
+  display: grid;
+}
+.add-location form fieldset label,
+.add-location form fieldset button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.add-location form fieldset input {
+  padding: 0.5em;
+}
+.add-location form fieldset input:focus {
+  border-color: var(--main-color);
+  outline-color: var(--main-color);
+}
+/* xxxxxxxxxxxxxxx 
+add-location
+xxxxxxxxxxxxxxxxxx*/
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 5em 0;
+}
